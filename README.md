@@ -6,14 +6,16 @@
     - [1.1.1. Install Kubectl](#111-install-kubectl)
     - [1.1.2. Install Kind](#112-install-kind)
   - [1.2. Deploying Kubeflow pipelines](#12-deploying-kubeflow-pipelines)
-  - [Uninstalling Kubeflow](#uninstalling-kubeflow)
+  - [1.3. Uninstalling Kubeflow](#13-uninstalling-kubeflow)
+  - [1.4. Deleting cluster](#14-deleting-cluster)
+- [From Notebook to Kubeflow Pipelines with MiniKF and Kale](#from-notebook-to-kubeflow-pipelines-with-minikf-and-kale)
 - [2. References](#2-references)
 
 # 1. Environment setup
 
 ## 1.1. Installing Kubeflow on a local, single machine.
 
-Reference: [1](https://www.kubeflow.org/docs/components/pipelines/installation/localcluster-deployment/)
+Reference: [[1](https://www.kubeflow.org/docs/components/pipelines/installation/localcluster-deployment/)]
 
 ### 1.1.1. Install Kubectl
 
@@ -68,7 +70,7 @@ kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80
 
 Then, open the Kubeflow Pipelines UI at http://localhost:8080/
 
-## Uninstalling Kubeflow
+## 1.3. Uninstalling Kubeflow
 
 If you used the above method to install Kubeflow, you can uninstall by:
 
@@ -78,6 +80,23 @@ kubectl delete -k "github.com/kubeflow/pipelines/manifests/kustomize/env/platfor
 kubectl delete -k "github.com/kubeflow/pipelines/manifests/kustomize/cluster-scoped-resources?ref=$PIPELINE_VERSION"
 ```
 
+## 1.4. Deleting cluster
+
+```bash
+# Get cluster names:
+kind get clusters
+
+#Delete cluster, specify --name if not default "kind"
+kind delete cluster
+```
+
+# From Notebook to Kubeflow Pipelines with MiniKF and Kale
+
+Reference: [[2](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-minikf-kale#0)]
+
+
+
 # 2. References
 
 1. [Deploying Kubeflow Pipelines on a local cluster](https://www.kubeflow.org/docs/components/pipelines/installation/localcluster-deployment/)
+2. [From Notebook to Kubeflow Pipelines with MiniKF and Kale](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-minikf-kale#0)
