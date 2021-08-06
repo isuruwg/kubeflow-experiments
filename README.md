@@ -8,8 +8,8 @@
   - [1.2. Deploying Kubeflow pipelines](#12-deploying-kubeflow-pipelines)
   - [1.3. Uninstalling Kubeflow](#13-uninstalling-kubeflow)
   - [1.4. Deleting cluster](#14-deleting-cluster)
-- [From Notebook to Kubeflow Pipelines with MiniKF and Kale](#from-notebook-to-kubeflow-pipelines-with-minikf-and-kale)
-- [2. References](#2-references)
+- [2. From Notebook to Kubeflow Pipelines with MiniKF and Kale](#2-from-notebook-to-kubeflow-pipelines-with-minikf-and-kale)
+- [3. References](#3-references)
 
 # 1. Environment setup
 
@@ -90,13 +90,13 @@ kind get clusters
 kind delete cluster
 ```
 
-# From Notebook to Kubeflow Pipelines with MiniKF and Kale
+# 2. From Notebook to Kubeflow Pipelines with MiniKF and Kale
 
 Reference: [[2](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-minikf-kale#0)]
 
 
 
-# 2. References
+# 3. References
 
 1. [Deploying Kubeflow Pipelines on a local cluster](https://www.kubeflow.org/docs/components/pipelines/installation/localcluster-deployment/)
 2. [From Notebook to Kubeflow Pipelines with MiniKF and Kale](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-minikf-kale#0)
